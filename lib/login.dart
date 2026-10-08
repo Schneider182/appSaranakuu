@@ -21,7 +21,12 @@ class _LoginPageState extends State<LoginPage> {
         Center(
           child: Container(
            width: 300,
-           color: Color.fromARGB(197, 220, 155, 155),
+           color: Color.fromARGB(225, 255, 255, 255),
+           child: TextField(
+            decoration: InputDecoration(
+              hintText: ""
+            ),
+           ),
           )
         )
       ],
