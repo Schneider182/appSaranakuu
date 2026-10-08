@@ -27,7 +27,7 @@ class _LoginPageState extends State<LoginPage> {
 
               child: TextField(
                 decoration: InputDecoration(
-                  hintText: "Masukan Nama Anda",
+                  hintText: "No. Anggota/Email",
                   border: OutlineInputBorder(),
                 ),
                 controller: inputNama,
@@ -46,7 +46,7 @@ class _LoginPageState extends State<LoginPage> {
 
               child: TextField(
                 decoration: InputDecoration(
-                  hintText: "Masukan Password Anda",
+                  hintText: "Kata Sandi",
                   border: OutlineInputBorder(),
                 ),
                 controller: inputPassword,
