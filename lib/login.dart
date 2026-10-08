@@ -26,8 +26,11 @@ class _LoginPageState extends State<LoginPage> {
             decoration: InputDecoration(
               hintText: "No.Anggota/Email",
               border: OutlineInputBorder(),
-
             ),
+            controller: inputSandi,
+            onSubmitted: (value) {
+              inputSandi.text = value;
+            } ,
            ),
           )
         )
