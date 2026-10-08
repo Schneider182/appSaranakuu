@@ -14,7 +14,9 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-    appBar : AppBar(title: Text("SARANKU")),
+    appBar : AppBar(title: 
+    
+    Text("SARANKU")),
     backgroundColor: Color.fromARGB(255, 179, 38, 30),
     body: Column(
       children: [
@@ -33,7 +35,18 @@ class _LoginPageState extends State<LoginPage> {
             } ,
            ),
           )
-        )
+        ),
+
+        Padding(padding: EdgeInsets.all(16)),
+        ElevatedButton(
+          child: Text("Login"),
+          onPressed: () {
+              print(inputAnggota.text);
+              print(inputSandi.text);
+              //Navigator.pushNamed(context, "/home"),
+              Navigator.pushNamed(context, "/home" );
+          },
+        ),
       ],
     ),
     );
