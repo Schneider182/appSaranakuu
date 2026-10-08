@@ -24,7 +24,7 @@ class _LoginPageState extends State<LoginPage> {
            color: Color.fromARGB(225, 255, 255, 255),
            child: TextField(
             decoration: InputDecoration(
-              hintText: "2024-001 / siswa@sekolah.id"
+              hintText: "No.Anggota//Email"
             ),
            ),
           )
