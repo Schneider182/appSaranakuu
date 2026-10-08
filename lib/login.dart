@@ -8,27 +8,57 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  TextEditingController inputAnggota = TextEditingController();
-  TextEditingController inputSandi = TextEditingController();
+  TextEditingController inputNama = TextEditingController();
+  TextEditingController inputPassword = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("SARANKU")),
-      backgroundColor: Color.fromARGB(255, 179, 38, 30),
+      appBar: AppBar(title: Text("Login Blog")),
+
+      backgroundColor: Color(0xFFFFFFFF),
+
       body: Column(
         children: [
           Center(
+            child: Image(
+              image: AssetImage("asset/yy.png"),
+              width: 175,
+              height: 175,
+            ),
+          ),
+          Center(
             child: Container(
               width: 300,
-              color: Color.fromARGB(225, 255, 255, 255),
+              color: Color.fromARGB(197, 220, 155, 155),
+
               child: TextField(
                 decoration: InputDecoration(
-                  hintText: "No.Anggota/Email",
+                  hintText: "Masukan Nama Anda",
                   border: OutlineInputBorder(),
                 ),
-                controller: inputSandi,
-                onSubmitted: (value) {
-                  inputSandi.text = value;
+                controller: inputNama,
+                onSubmitted: (values) {
+                  inputNama.text = values;
+                },
+              ),
+            ),
+          ),
+
+          Padding(padding: EdgeInsets.all(16)),
+          Center(
+            child: Container(
+              width: 300,
+              color: Color.fromARGB(197, 220, 155, 155),
+
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: "Masukan Password Anda",
+                  border: OutlineInputBorder(),
+                ),
+                controller: inputPassword,
+                onSubmitted: (values) {
+                  inputPassword.text = values;
                 },
               ),
             ),
@@ -38,10 +68,10 @@ class _LoginPageState extends State<LoginPage> {
           ElevatedButton(
             child: Text("Login"),
             onPressed: () {
-              print(inputAnggota.text);
-              print(inputSandi.text);
-              //Navigator.pushNamed(context, "/home"),
-              Navigator.pushNamed(context, "/home");
+              print(inputNama.text);
+              print(inputPassword.text);
+            
+              Navigator.pushNamed(context, "/home" );
             },
           ),
         ],
