@@ -15,15 +15,14 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("SARANKU")),
-
-      backgroundColor: Color(0xFFFFFFFF),
+      backgroundColor: Color(0xFFFFF7ED),
 
       body: Column(
         children: [
           Center(
             child: Container(
               width: 300,
-              color: Color.fromARGB(197, 220, 155, 155),
+              color: Color(0xFFFFFFFF),
 
               child: TextField(
                 decoration: InputDecoration(
@@ -42,7 +41,7 @@ class _LoginPageState extends State<LoginPage> {
           Center(
             child: Container(
               width: 300,
-              color: Color.fromARGB(197, 220, 155, 155),
+              color: Color(0xFFFFFFFF),
 
               child: TextField(
                 decoration: InputDecoration(
@@ -63,7 +62,7 @@ class _LoginPageState extends State<LoginPage> {
             onPressed: () {
               print(inputNama.text);
               print(inputPassword.text);
-             
+
               Navigator.pushNamed(context, "/home");
             },
           ),
